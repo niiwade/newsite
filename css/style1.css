@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+:root {
+    --gold: #FFCE00;
+    --dark: rgb(0, 0, 0);
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none
+}
+
+#main {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../img/machine.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.logo {
+    height: 80px;
+}
+
+.logo img {
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li a {
+    margin: 0px 5px;
+    font-size: 0.8rem;
+    letter-spacing: 9px;
+}

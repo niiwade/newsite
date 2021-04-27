@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+:root {
+    --gold: #FFCE00;
+    --dark: rgb(0, 0, 0);
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    width: 100%;
+    min-height: 85vh;
+}
+
+.card {
+    margin: 100px auto 0;
+    width: 1000px;
+    height: 650px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card-face--front {
+    background-image: url(../img/mainbg.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-face--front h2 {
+    color: var(--gold);
+    text-shadow: 350%;
+    font-size: 120px;
+}
+
+.card-face--front h3 {
+    color: var(--gold);
+    font-size: 50px;
+}
+
+.card-face--back {
+    background-color: var(--white);
+    transform: rotateY(180deg);
+}
+
+.card-content {
+    width: 100%;
+    height: 100%;
+}
+
+.card-header {
+    position: relative;
+    padding: 30px 30px 40px;
+}
+
+.card-header:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 0 0 50% 0;
+    background: #C02425;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F0CB35, #C02425);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F0CB35, #C02425);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.dp {
+    display: block;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 0px;
+    border-radius: 50%;
+}
+
+.card-header h2 {
+    color: #fff;
+    font-size: 29px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card-body {
+    padding: 50px;
+}
+
+.card-body h3 {
+    color: rgb(20, 18, 18);
+    top: 50px;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.card-body p {
+    color: var(--dark);
+    font-size: 30px;
+    line-height: -1.2px;
+    font-weight: 400;
+}
+
+.card-body a {
+    background: #FF512F;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F09819, #FF512F);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F09819, #FF512F);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 18px;
+    color: var(--white)
+}
