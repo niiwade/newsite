@@ -6,53 +6,210 @@
 }
 
 * {
+    font: inherit;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-ul {
-    list-style: none;
+body {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #333;
 }
 
-a {
-    text-decoration: none
+p {
+    max-width: 600;
 }
 
-#main {
+#container {
+    max-width: 1200px;
+    padding: 24px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.navi {
+    flex-grow: 1;
+    margin-left: 40px;
+}
+
+.navi--items {
+    text-decoration: none;
+    color: #333;
+    margin-left: 24px;
+}
+
+.navi--items:first-child {
+    margin-left: 0;
+}
+
+.navi--item_active {
+    color: #FFCE00;
+}
+
+.navi-btn {
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    background: #cc9c0b;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #181818, #BA8B02);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #181818, #BA8B02);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 10px 36px;
+    border-radius: 50px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+}
+
+.main-content {
+    flex: 1;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.title {
+    font-size: 52px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.desc {
+    color: var(--gold);
+    margin: 0;
+    padding: 0;
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+
+.down-btn {
+    border: 1px solid rgb(63, 63, 63);
+    display: flex;
+    align-items: center;
+    padding: 10px 36px;
+    background: transparent;
+    border-radius: 50px;
+    background: #cc9c0b;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #181818, #BA8B02);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #181818, #BA8B02);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.down-btn .fas {
+    background: inherit;
+    font-size: 1.5rem;
+    margin-right: 6px;
+}
+
+.main-image {
+    flex: 1;
+}
+
+.main-image img {
     width: 100%;
-    min-height: 100vh;
-    background-image: url(../img/machine.png);
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-nav {
+footer {
     display: flex;
+    color: var(--dark);
+}
+
+.social {
+    margin-right: 40px;
+}
+
+.social-items {
+    margin-right: 12px;
+}
+
+.social-items:hover {
+    color: #BA8B02;
+}
+
+.menu-btn {
+    flex-grow: 1;
+    display: none;
+}
+
+.menu-btn button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.4rem;
+}
+
+.mobile-navi {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    padding: 24px;
+    display: none;
+    transform: translateX(-100%);
+    transition: transform 300ms ease-in-out;
+}
+
+.mobile-navi_open {
+    transform: translateX(0);
+}
+
+.mobile-navi-header {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
+    margin-bottom: 40px;
 }
 
-.logo {
-    height: 80px;
+.mobile--item_active {
+    color: #181818;
 }
 
-.logo img {
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
+.close-btn button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
 }
 
-.menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.mobile-navi--items {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #BA8B02;
+    display: block;
+    margin-bottom: 24px;
 }
 
-.menu li a {
-    margin: 0px 5px;
-    font-size: 0.8rem;
-    letter-spacing: 9px;
+@media only screen and (max-width: 660px) {
+    main {
+        display: block;
+    }
+    header .mylogo {
+        display: none;
+    }
+    .navi {
+        display: none;
+    }
+    .mobile-navi {
+        display: block;
+    }
+    .menu-btn {
+        display: none;
+    }
 }

@@ -14,26 +14,73 @@
 
 <body>
 
-    <section id="main">
+    <div class="mobile-navi" id="mobile-navi">
+        <div class="mobile-navi-header">
+            <img src="img/logo.svg" class="mylogo" />
 
-        <!----Nav-->
-        <nav class="navi">
+            <div class="close-btn" onclick="toggleMobileNavigation()">
+                <button> 
+                    <i class="fas fa-close"></i>
+                </button>
+            </div>
+        </div>
+        <a href="" class="mobile--navi--items  mobile--item_active">Home</a>
+        <a href="" class="mobile-navi--items">Services</a>
+        <a href="" class="mobile-navi--items">About Us</a>
+        <a href="" class="mobile-navi--items">Contact</a>
+    </div>
 
-            <a href="index.html" class="logo">
-                <img src="img/logo.svg" alt="Logo" />
-            </a>
+    <div id="container">
+        <header>
+            <img src="img/logo.svg" class="mylogo" />
 
-            <!---Menu-->
+            <nav class="navi">
+                <a href="" class="navi--items navi--item_active">Home</a>
+                <a href="" class="navi--items">Services</a>
+                <a href="" class="navi--items">About Us</a>
+                <a href="" class="navi--items">Contact</a>
+            </nav>
 
-            <ul class="menu">
-                <li><a href="#">Services</a></li>
-                <li><a href="#"><i class="fas fa-paper-plane"></i>About Us</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            <div class="menu-btn" onclick="toggleMobileNavigation()">
+                <button>
+                    <i class="fas fa-reorder"></i>
+                </button>
+            </div>
 
-        </nav>
 
-    </section>
+            <button class="navi-btn">Request Quote</button>
+        </header>
+
+
+        <main>
+            <div class="main-content">
+                <h1 class="title">Construction <br> is the future</h1>
+                <p class="desc">
+                    Lorem ipsum dolorsdadassdsa s ddsda
+                </p>
+
+
+                <button class="down-btn"><a href="./doc/Hareshima Profile.pdf"><i class="fas fa-download"></i>Download our Profile</a>
+                </button>
+            </div>
+
+
+            <div class="main-image">
+                <img src="./img/machine.png">
+            </div>
+        </main>
+
+
+        <footer>
+            <div class="social">
+                <a href="" class="social-items"><i class="fas fa-instagram"></i></a>
+                <a href="" class="social-items"><i class="fas fa-instagram"></i></a>
+                <a href="" class="social-items"><i class="fas fa-instagram"></i></a>
+            </div>
+
+            <span>PW Technologies</span>
+        </footer>
+    </div>
 
     <script src="js/app1.js"></script>
 </body>
